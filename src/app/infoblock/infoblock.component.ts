@@ -2,6 +2,9 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 import { HeaderComponent } from './header/header.component';
 import { BodyComponent } from './body/body.component';
 
+// directive to manipulate collapse of infobox body
+import { CollapseDirective } from '../collapse';
+
 @Component({
   selector: 'app-infoblock',
   templateUrl: './infoblock.component.html',

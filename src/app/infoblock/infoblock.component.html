@@ -1,2 +1,2 @@
-<app-infoblock-header></app-infoblock-header>
-<app-infoblock-body></app-infoblock-body>
+<app-infoblock-header (click)="isCollapsed = !isCollapsed"></app-infoblock-header>
+<app-infoblock-body [appInfoblockCollapse]="isCollapsed"></app-infoblock-body>
