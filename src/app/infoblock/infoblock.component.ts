@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, OnInit, AfterViewInit, ViewChild, Input } from '@angular/core';
 import { HeaderComponent } from './header/header.component';
 import { BodyComponent } from './body/body.component';
 
@@ -10,14 +10,21 @@ import { CollapseDirective } from '../collapse';
   templateUrl: './infoblock.component.html',
   styleUrls: ['./infoblock.component.css']
 })
-export class InfoblockComponent implements OnInit {
+export class InfoblockComponent implements OnInit, AfterViewInit {
+  private contents: object;
 
   @ViewChild(HeaderComponent) headerComponent: HeaderComponent;
   @ViewChild(BodyComponent) bodyComponent: BodyComponent;
 
+  @Input() data: object;
+
   constructor() { }
 
   ngOnInit() {
+    console.log(this.data);
+    this.contents = this.data;
   }
 
+  ngAfterViewInit(): void {
+  }
 }

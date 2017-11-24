@@ -1,4 +1,10 @@
 <h1>{{title}}</h1>
+<h3>{{subtitle}}</h3>
+<br/>
+<div *ngFor="let content of dataObject.contents">
+    <h4>{{content.info}}</h4>
+    <h5>{{content.description}}</h5>
+    <app-infoblock *ngFor="let subcontent of content.contents" [data]="subcontent"></app-infoblock>
+</div>
 
-<app-infoblock></app-infoblock>
 

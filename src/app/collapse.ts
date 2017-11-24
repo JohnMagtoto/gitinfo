@@ -11,13 +11,13 @@ export class CollapseDirective {
   @HostBinding('class.collapsing')
   private isCollapsing: boolean;
 
-    // style
-  @HostBinding('style.height')
-  private height: string;
+  // style
+  @HostBinding('style.visibility')
+  private visibility: string;
 
 
   @Input()
-  private set collapse(value: boolean) {
+  private set appInfoblockCollapse(value: boolean) {
     if (value !== undefined) {
       if (value) {
         this.hide();
@@ -40,16 +40,16 @@ export class CollapseDirective {
   }
 
   hide() {
-    this.height = this.h + 'px';
+    // this.height = this.h + 'px';
     setTimeout(() => {
-        this.height = '0px';
+        this.visibility = 'hidden';
         this.isCollapsing = true; // apply 'collapsing' class
     }, 1);
   }
   show() {
-    this.height = '0px';
+    // this.height = '0px';
     setTimeout(() => {
-        this.height = this.h + 'px';
+        this.visibility = 'visible';
         this.isCollapsing = true; // apply 'collapsing' class
     }, 1);
   }

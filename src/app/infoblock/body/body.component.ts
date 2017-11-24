@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+
+import { CollapseDirective } from '../../collapse';
 
 @Component({
   selector: 'app-infoblock-body',
@@ -6,6 +8,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./body.component.css']
 })
 export class BodyComponent implements OnInit {
+
+  @Input() bodyText: string;
 
   constructor() { }
 
