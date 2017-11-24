@@ -10,16 +10,19 @@
             "description" : "Configure user information for all local repositories",
             "contents" : [
                 {
+                    "title" : "Set Global Name",
                     "info" : "$ git config --global user.name \"[name]\" ",
                     "type" : "config",
                     "description" : "Sets the name you want attached to your commit transactions"
                 },
                 {
+                    "title" : "Set Global Email",
                     "info" : "$ git config --global user.email \"[email address]\" ",
                     "type" : "config",
                     "description" : "Sets the email you want attached to your commit transactions"
                 },
                 {
+                    "title" : "Set Global Color",
                     "info" : "$ git config --global color.ui auto ",
                     "type" : "config",
                     "description" : "Enables helpful colorization of command line output"
