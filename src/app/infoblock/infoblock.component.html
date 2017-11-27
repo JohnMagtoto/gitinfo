@@ -1,9 +1,12 @@
-
-<app-infoblock-header
-    [headerText]="data.description"
-    (click)="isCollapsed = !isCollapsed">
-</app-infoblock-header>
-<app-infoblock-body
-    *ngIf="isCollapsed"
-    [bodyText]="data.info">
-</app-infoblock-body>
+<ons-card>
+    <app-infoblock-header
+        [headerText]="data.description"
+        (click)="isCollapsed = !isCollapsed"
+        class="title">
+    </app-infoblock-header>
+    <app-infoblock-body
+        *ngIf="isCollapsed"
+        [bodyText]="data.info"
+        class="content">
+    </app-infoblock-body>
+</ons-card>

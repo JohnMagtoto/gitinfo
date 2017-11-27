@@ -1,10 +1,20 @@
-<h1>{{title}}</h1>
-<h3>{{subtitle}}</h3>
-<br/>
-<div *ngFor="let content of dataObject.contents">
-    <h4>{{content.info}}</h4>
-    <h5>{{content.description}}</h5>
-    <app-infoblock *ngFor="let subcontent of content.contents" [data]="subcontent"></app-infoblock>
-</div>
+<ons-page>
+        <ons-toolbar>
+            <div class="center">
+                {{title}}
+            </div>
+        </ons-toolbar>
+        <div class="background"></div>
+        <div class="content">
+            <h3 id="subtitle">{{subtitle}}</h3>
+            <div *ngFor="let content of dataObject.contents">
+                <div class="intro">
+                    <h4>{{content.info}}</h4>
+                    <p>{{content.description}}</p>
+                </div>
+                <app-infoblock *ngFor="let subcontent of content.contents" [data]="subcontent"> </app-infoblock>
+            </div>
+        </div>
+</ons-page>
 
 

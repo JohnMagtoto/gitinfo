@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { OnsenModule } from 'ngx-onsenui';
 
 import { AppComponent } from './app.component';
 import { InfoblockComponent } from './infoblock/infoblock.component';
@@ -16,10 +17,12 @@ import { CollapseDirective } from './collapse';
     CollapseDirective
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    OnsenModule
   ],
   providers: [],
   bootstrap: [AppComponent],
-  exports: []
+  exports: [],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class AppModule { }
