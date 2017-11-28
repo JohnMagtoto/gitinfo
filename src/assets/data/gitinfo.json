@@ -11,21 +11,120 @@
             "contents" : [
                 {
                     "title" : "Set Global Name",
-                    "info" : "$ git config --global user.name \"[name]\" ",
                     "type" : "config",
+                    "info" : "$ git config --global user.name \"[name]\" ",
                     "description" : "Sets the name you want attached to your commit transactions"
                 },
                 {
                     "title" : "Set Global Email",
-                    "info" : "$ git config --global user.email \"[email address]\" ",
                     "type" : "config",
+                    "info" : "$ git config --global user.email \"[email address]\" ",
                     "description" : "Sets the email you want attached to your commit transactions"
                 },
                 {
                     "title" : "Set Global Color",
-                    "info" : "$ git config --global color.ui auto ",
                     "type" : "config",
+                    "info" : "$ git config --global color.ui auto ",
                     "description" : "Enables helpful colorization of command line output"
+                }
+            ]
+        },
+        {
+            "info" : "Create Repositories",
+            "type" : "repository",
+            "description" : "Start a new repositoru or obtain one from an existing URL",
+            "contents" : [
+                {
+                    "title" : "Create New Repo",
+                    "type" : "repository",
+                    "info" : "$ git init [project-name]",
+                    "description" : "Creates a new local repository with the specified name"
+                },
+                {
+                    "title" : "Clone Repo from URL",
+                    "type" : "repository",
+                    "info" : "$ git clone [URL]",
+                    "description" : "Downloads a project and its entire version history"
+                }
+            ]
+        },
+        {
+            "info" : "Make Changes",
+            "type" : "changes",
+            "description" : "Review edits and craft a commit transaction",
+            "contents" : [
+                {
+                    "title" : "Check Status",
+                    "type" : "changes",
+                    "info" : "$ git status",
+                    "description" : "Lists all new or modified files to be committed"
+                },
+                {
+                    "title" : "Check File Differences",
+                    "type" : "changes",
+                    "info" : "$ git diff",
+                    "description" : "Shows file differences not yet staged"
+                },
+                {
+                    "title" : "Add File",
+                    "type" : "changes",
+                    "info" : "$ git add [file]",
+                    "description" : "Snapshots the file in preparation for versioning"
+                },
+                {
+                    "title" : "Check File Differences (Staged)",
+                    "type" : "changes",
+                    "info" : "$ git diff --staged",
+                    "description" : "Shows file differences between staging and the last file version"
+                },
+                {
+                    "title" : "Reset File From Staging",
+                    "type" : "changes",
+                    "info" : "$ git reset [file]",
+                    "description" : "Unstages the file, but preserve its contents"
+                },
+                {
+                    "title" : "Commit",
+                    "type" : "changes",
+                    "info" : "$ git commit -m \"[descriptive message]\"",
+                    "description" : "Records file snapshots permanently in version history"
+                }
+            ]
+        },
+        {
+            "info" : "Group Changes",
+            "type" : "group",
+            "description" : "Name a series of commits and combine complete efforts",
+            "contents" : [
+                {
+                    "title" : "List Branches",
+                    "type" : "group",
+                    "info" : "$ git branch",
+                    "description" : "Lists all local branches in the current repository"
+                },
+                {
+                    "title" : "New Branch",
+                    "type" : "group",
+                    "info" : "$ git branch [branch-name]",
+                    "description" : "Creates a new branch"
+                },
+                {
+                    "title" : "Checkout Branch",
+                    "type" : "group",
+                    "info" : "$ git checkout [branch-name]",
+                    "description" : "Switches to the specified branch and updates the working directory"
+                },
+                {
+                    "title" : "Merge Branches",
+                    "type" : "group",
+                    "info" : "$ git merge [branch-name]",
+                    "description" : "Combines the specified branch's history into the current branch"
+                },
+                {
+                    "title" : "Delete Branch",
+                    "type" : "group",
+                    "info" : "$ git branch -d [branch-name]",
+                    "description" : "Deletes the specified branch"
                 }
             ]
         }

@@ -12,7 +12,9 @@
                     <h4>{{content.info}}</h4>
                     <p>{{content.description}}</p>
                 </div>
-                <app-infoblock *ngFor="let subcontent of content.contents" [data]="subcontent"> </app-infoblock>
+                <ons-card *ngFor="let subcontent of content.contents">
+                    <app-infoblock  [data]="subcontent"> </app-infoblock>
+                </ons-card>
             </div>
         </div>
 </ons-page>

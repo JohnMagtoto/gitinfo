@@ -21,7 +21,6 @@ export class InfoblockComponent implements OnInit, AfterViewInit {
   constructor() { }
 
   ngOnInit() {
-    console.log(this.data);
     this.contents = this.data;
   }
 
