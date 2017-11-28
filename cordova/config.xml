@@ -4,6 +4,8 @@
     <description>
         A sample Apache Cordova application that responds to the deviceready event.
     </description>
+    <!-- Build and prepare the Angular 2 application. -->
+    <hook type="before_prepare" src="hooks/prepareAngular2App.js"/>
     <author email="dev@cordova.apache.org" href="http://cordova.io">
         Apache Cordova Team
     </author>

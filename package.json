@@ -10,7 +10,7 @@
     "lint": "ng lint",
     "e2e": "ng e2e",
     "build-cordova" : "ng build --target=production --environment=prod --output-path cordova/www/",
-    "run-cordova:browser" : "cd cordova && cordova run browser"
+    "cordova-run:default" : "cordova run browser"
   },
   "private": true,
   "dependencies": {
