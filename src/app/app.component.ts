@@ -11,6 +11,7 @@ import * as data from '../assets/data/gitinfo.json';
 export class AppComponent implements OnInit, AfterViewInit {
   title = 'app';
   subtitle = 'app subtitle';
+  contents: string;
 
   @Output() dataObject: object;
 
@@ -19,7 +20,7 @@ export class AppComponent implements OnInit, AfterViewInit {
     this.dataObject = data;
     this.title = this.dataObject['info'];
     this.subtitle = this.dataObject['description'];
-
+    this.contents = this.dataObject['contents'];
   }
 
   ngAfterViewInit() {

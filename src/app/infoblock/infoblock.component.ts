@@ -12,6 +12,9 @@ import { CollapseDirective } from '../collapse';
 })
 export class InfoblockComponent implements OnInit, AfterViewInit {
   private contents: object;
+  isCollapsed: boolean;
+  info: string;
+  description: string;
 
   @ViewChild(HeaderComponent) headerComponent: HeaderComponent;
   @ViewChild(BodyComponent) bodyComponent: BodyComponent;
@@ -22,6 +25,8 @@ export class InfoblockComponent implements OnInit, AfterViewInit {
 
   ngOnInit() {
     this.contents = this.data;
+    this.info = this.contents['info'];
+    this.description = this.contents['description'];
   }
 
   ngAfterViewInit(): void {

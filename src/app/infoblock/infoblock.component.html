@@ -1,10 +1,10 @@
 <app-infoblock-header
-    [headerText]="data.info"
+    [headerText]="info"
     (click)="isCollapsed = !isCollapsed"
     class="title">
 </app-infoblock-header>
 <app-infoblock-body
     *ngIf="isCollapsed"
-    [bodyText]="data.description"
+    [bodyText]="description"
     class="content">
 </app-infoblock-body>
