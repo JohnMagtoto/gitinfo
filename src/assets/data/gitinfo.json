@@ -127,6 +127,31 @@
                     "description" : "Deletes the specified branch"
                 }
             ]
+        },
+        {
+            "info" : "Refactor Filenames",
+            "type" : "refactor",
+            "description" : "Relocate and remove versioned files",
+            "contents" : [
+                {
+                    "title" : "Remove File from Working Directory",
+                    "type" : "refactor",
+                    "info" : "$ git rm [file]",
+                    "description" : "Delete the file from the working direcotry and stages the deletion"
+                },
+                {
+                    "title" : "Remove the file from Working Directory (cache)",
+                    "type" : "refactor",
+                    "info" : "$ git rm --cached [file]",
+                    "description" : "Removes the file from version control but preserves the file locally"
+                },
+                {
+                    "title" : "Change File Name and Prepare Commit",
+                    "type" : "refactor",
+                    "info" : "$ git mv [file-original] [file-renamed]",
+                    "description" : "Changes the file name and prepares it for commit"
+                }
+            ]
         }
     ]
 }
